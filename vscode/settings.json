@@ -1,0 +1,14 @@
+{
+    "tailwindCSS.experimental.configFile": ".nuxt/tailwind/postcss.mjs",
+    "tailwindCSS.experimental.classRegex": [
+        "tw`(.*?)`",
+        "tw\\('(.*?)'\\)",
+        "tw\\(\\s*('(.*?)'|\"(.*?)\")\\s*\\)"
+    ],
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "editor.quickSuggestions": {
+        "strings": true
+    }
+}
