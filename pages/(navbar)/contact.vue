@@ -1,5 +1,5 @@
 <template>
-  <h2 class="text-3xl font-bold font-mono mb-2 uppercase">home</h2>
+  <h2 class="text-3xl font-bold font-mono mb-2 uppercase">contact</h2>
   <Info />
 </template>
 
