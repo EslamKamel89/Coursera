@@ -4,7 +4,7 @@
   <div></div>
   <div>
     <div v-if="slugs.length > 0">
-      <span>Path (</span>
+      <span>Path </span><span class="text-lg font-bold">(</span>
       <span v-for="slug in slugs" :key="slug" class="text-lg font-bold">
         {{ slug }}/
       </span>
@@ -15,6 +15,7 @@
 
 <script setup lang="ts">
 const slugs = useRoute().params.slug as string[];
+const url = import.meta.url;
 </script>
 
 <style scoped></style>
