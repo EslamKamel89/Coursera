@@ -4,7 +4,18 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  middleware: [
+    function (to, from) {
+      if (import.meta.client) {
+        console.log("Inline Middleware in the about page");
+      }
+      if (to.query?.secret != "Be the best version of your self") {
+        return navigateTo("/");
+      }
+    },
+    "logger",
+  ],
+});
 const route = useRoute();
 </script>
-
-<style scoped></style>
