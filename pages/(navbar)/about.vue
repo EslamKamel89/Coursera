@@ -5,6 +5,7 @@
 
 <script setup lang="ts">
 definePageMeta({
+  layout: "green",
   middleware: [
     function (to, from) {
       if (import.meta.client) {

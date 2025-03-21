@@ -14,6 +14,15 @@
   </ul>
 </template>
 
-<script setup lang="ts"></script>
-
-<style scoped></style>
+<script setup lang="ts">
+const route = useRoute();
+// definePageMeta({
+//   layout: "red",
+// });
+onMounted(() => {
+  const color = route.query.c;
+  if (color == "green" || color == "red" || color == "default") {
+    setPageLayout(color);
+  }
+});
+</script>
