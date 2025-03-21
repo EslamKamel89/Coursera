@@ -7,4 +7,10 @@
 
 <script setup lang="ts">
 const route = useRoute();
+definePageMeta({
+  validate: async (route) => {
+    const regExp = new RegExp("^\\d+$");
+    return typeof route.params.id == "string" && regExp.test(route.params.id);
+  },
+});
 </script>
