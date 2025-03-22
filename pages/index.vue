@@ -1,5 +1,7 @@
 <template>
-  <h2 class="text-3xl font-bold font-mono mb-2 uppercase">home</h2>
+  <div>
+    <h2 class="title px-3 animate__animated animate__bounce">home</h2>
+  </div>
   <button
     class="bg-blue-500 text-white px-3 py-2 rounded-xl"
     @click="toggleInfo"
@@ -17,6 +19,7 @@
 </template>
 
 <script setup lang="ts">
+import "~/assets/css/main.css";
 const showInfo = ref(false);
 const toggleInfo = () => {
   showInfo.value = !showInfo.value;

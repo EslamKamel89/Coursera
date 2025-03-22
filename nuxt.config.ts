@@ -9,4 +9,14 @@ export default defineNuxtConfig({
     viewer: true,
     // and more...
   },
+  css: ["animate.css"],
+  app: {
+    head: {
+      title: "Nuxt Blog", // default fallback title
+      htmlAttrs: {
+        lang: "en",
+      },
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    },
+  },
 });

@@ -1,0 +1,19 @@
+.title {
+  font-family: "Roboto", sans-serif; /* Modern, clean font */
+  font-size: 48px; /* Large, attention-grabbing */
+  font-weight: 700; /* Bold for emphasis */
+  text-transform: uppercase; /* Adds a sharp, professional look */
+  color: #0d6efd; /* Vibrant blue */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  border-bottom: 3px solid #0d6efd; /* Underline to give structure */
+  padding-bottom: 10px; /* Spacing for neatness */
+  margin-bottom: 20px; /* Spacing between title and content */
+  text-align: center; /* Center-align for balance */
+  letter-spacing: 2px; /* Space between letters for modern look */
+  background: linear-gradient(
+    90deg,
+    rgba(13, 110, 253, 0.2),
+    rgba(13, 110, 253, 0)
+  ); /* Gradient highlight */
+  display: inline-block; /* Neat box around the title */
+}
