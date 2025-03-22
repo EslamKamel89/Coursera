@@ -7,10 +7,10 @@ export default defineNuxtConfig({
     exposeConfig: true,
     editorSupport: true,
     viewer: true,
-    // and more...
   },
   css: ["animate.css"],
   app: {
+    layoutTransition: { name: "layout", mode: "out-in" },
     head: {
       title: "Nuxt Blog", // default fallback title
       htmlAttrs: {
