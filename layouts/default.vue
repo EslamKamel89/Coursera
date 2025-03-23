@@ -1,5 +1,5 @@
 <template>
-  <NavbarComp />
+  <NavbarComp :color="color" />
   <div class="max-w-4xl mx-5 md:mx-auto mt-4">
     <slot />
     <div
@@ -7,12 +7,12 @@
       :class="{
         'bg-red-500': color == 'red',
         'bg-green-500': color == 'green',
-        'bg-blue-500': color == 'default',
+        'bg-blue-500': color == 'blue',
       }"
     >
       <label>Pick Layout Theme</label>
       <select v-model="color" class="text-black rounded-xl px-4 py-2">
-        <option value="default">Default</option>
+        <option value="blue">Default</option>
         <option value="green">Green</option>
         <option value="red">Red</option>
       </select>
@@ -21,10 +21,10 @@
 </template>
 
 <script setup lang="ts">
-const color = ref<"red" | "green" | "default">("default");
+const color = ref<"red" | "green" | "blue">("blue");
 watch(color, (c) => {
   console.log(c);
-  setPageLayout(c);
+  // setPageLayout(c);
 });
 </script>
 
