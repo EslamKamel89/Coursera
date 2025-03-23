@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div
-      class="bg-blue-900 text-white py-4 w-full font-mono"
+      class="bg-blue-900 text-white p-4 w-full font-mono"
       :class="{
         'bg-blue-900': !color || color == 'blue',
         'bg-green-900': color == 'green',
@@ -11,6 +11,11 @@
       <ul class="flex gap-x-5 max-w-4xl mx-5 md:mx-auto container">
         <li>
           <NuxtLink to="/" :exact-active-class="active">Home</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/products" :exact-active-class="active"
+            >Products</NuxtLink
+          >
         </li>
         <li>
           <NuxtLink to="/services" :exact-active-class="active"

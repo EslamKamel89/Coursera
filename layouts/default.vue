@@ -1,6 +1,6 @@
 <template>
   <NavbarComp :color="color" />
-  <div class="max-w-4xl mx-5 md:mx-auto mt-4">
+  <div class="max-w-4xl mx-5 md:mx-auto mt-4 px-4">
     <slot />
     <div
       class="flex items-center space-x-2 mt-5 text-white pt-4 pb-20 rounded-xl px-2"
