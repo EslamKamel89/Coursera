@@ -27,7 +27,10 @@ const {
   execute,
   status,
   error,
-} = useFetch<Product[]>("https://fakestoreapi.com/products", { method: "GET" });
+} = useFetch<Product[]>("/products", {
+  method: "GET",
+  baseURL: "https://fakestoreapi.com",
+});
 onMounted(() => {
   execute();
 });

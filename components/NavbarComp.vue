@@ -18,10 +18,17 @@
           >
         </li>
         <li>
+          <NuxtLink to="/blog/posts" :exact-active-class="active"
+            >Posts</NuxtLink
+          >
+        </li>
+        <!--
+        <li>
           <NuxtLink to="/services" :exact-active-class="active"
             >Services</NuxtLink
           >
         </li>
+        -->
         <li>
           <NuxtLink to="/pricing" :exact-active-class="active"
             >Pricing</NuxtLink
