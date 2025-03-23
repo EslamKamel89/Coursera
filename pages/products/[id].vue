@@ -6,7 +6,19 @@
     <div>{{ error?.message }}</div>
   </template>
   <template v-else-if="status == 'success'">
-    <TitleComp :title="product?.title ?? ''" />
+    <div class="flex justify-between items-start">
+      <TitleComp
+        :title="product?.title ?? ''"
+        @click="refresh"
+        class="cursor-pointer mb-4"
+      />
+      <button
+        class="bg-blue-500 text-white px-3 py-2 rounded-xl"
+        @click="fetchRandomProduct"
+      >
+        Random Porduct
+      </button>
+    </div>
     <div
       class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
     >
@@ -54,15 +66,24 @@
 import type { Product } from "~/types";
 
 const route = useRoute();
+let id: number = Number(route.params.id);
+const url = ref(`https://fakestoreapi.com/products/${id}`);
 const {
   data: product,
   execute,
   status,
   error,
-} = useFetch<Product>(`https://fakestoreapi.com/products/${route.params.id}`, {
+  refresh,
+} = useFetch<Product>(url, {
   method: "GET",
+  immediate: false,
 });
 onMounted(() => {
   execute();
 });
+const fetchRandomProduct = async () => {
+  id = Math.floor(Math.random() * 10) + 1;
+  url.value = `https://fakestoreapi.com/products/${id}`;
+  //   refresh();
+};
 </script>
