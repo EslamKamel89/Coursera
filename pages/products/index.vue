@@ -30,6 +30,7 @@ const {
 } = useFetch<Product[]>("/products", {
   method: "GET",
   baseURL: "https://fakestoreapi.com",
+  // query: { secret: "Eslam Ahmed" },
 });
 onMounted(() => {
   execute();

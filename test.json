@@ -1,8 +1,25 @@
 {
-    "id": 0,
-    "title": "string",
-    "price": 0.1,
-    "description": "string",
-    "category": "string",
-    "image": "http://example.com"
+    "Meta Data": {
+        "1. Information": "Daily Prices (open, high, low, close) and Volumes",
+        "2. Symbol": "IBM",
+        "3. Last Refreshed": "2025-03-21",
+        "4. Output Size": "Compact",
+        "5. Time Zone": "US/Eastern"
+    },
+    "Time Series (Daily)": {
+        "2025-03-21": {
+            "1. open": "241.6900",
+            "2. high": "245.2050",
+            "3. low": "238.5000",
+            "4. close": "243.8700",
+            "5. volume": "9580084"
+        },
+        "2025-03-20": {
+            "1. open": "244.2400",
+            "2. high": "246.8000",
+            "3. low": "237.2240",
+            "4. close": "243.3200",
+            "5. volume": "7026796"
+        }
+    }
 }

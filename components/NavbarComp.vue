@@ -22,6 +22,9 @@
             >Posts</NuxtLink
           >
         </li>
+        <li>
+          <NuxtLink to="/stocks" :exact-active-class="active">Stocks</NuxtLink>
+        </li>
         <!--
         <li>
           <NuxtLink to="/services" :exact-active-class="active"
