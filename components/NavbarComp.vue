@@ -25,6 +25,11 @@
         <li>
           <NuxtLink to="/stocks" :exact-active-class="active">Stocks</NuxtLink>
         </li>
+        <li>
+          <NuxtLink to="/currency" :exact-active-class="active"
+            >Currency</NuxtLink
+          >
+        </li>
         <!--
         <li>
           <NuxtLink to="/services" :exact-active-class="active"

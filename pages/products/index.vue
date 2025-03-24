@@ -16,6 +16,7 @@
         </div>
       </div>
     </template>
+    <template v-else-if="status == 'idle'"> Doing nothing...</template>
   </div>
 </template>
 
@@ -27,12 +28,24 @@ const {
   execute,
   status,
   error,
-} = useFetch<Product[]>("/products", {
+} = await useFetch<Product[]>("/products", {
   method: "GET",
   baseURL: "https://fakestoreapi.com",
+  lazy: true,
+  immediate: false,
+  transform: (products: Product[]) =>
+    products.map((product) => {
+      return {
+        ...product,
+        title: `🔫🔫🔫🔫 ${product.title} 🔪🗡️🔪🗡️`,
+      };
+    }),
+  // pick: ['price']
   // query: { secret: "Eslam Ahmed" },
 });
 onMounted(() => {
   execute();
+  // setTimeout(() => {
+  // }, 2000);
 });
 </script>

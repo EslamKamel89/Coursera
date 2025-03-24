@@ -1,4 +1,8 @@
 <template>
+  <div class="flex flex-row gap-x-2 items-center">
+    <button @click="likeCount++" class="text-3xl">💞 {{ likeCount }}</button>
+    <button @click="changeDescription" class="text-3xl">💬</button>
+  </div>
   <template v-if="status == 'pending'">
     <div>Loading....</div>
   </template>
@@ -67,6 +71,7 @@ import type { Product } from "~/types";
 
 const route = useRoute();
 let id: number = Number(route.params.id);
+let likeCount = ref(0);
 const url = ref(`https://fakestoreapi.com/products/${id}`);
 const {
   data: product,
@@ -77,6 +82,7 @@ const {
 } = useFetch<Product>(url, {
   method: "GET",
   immediate: false,
+  // deep: false,
 });
 onMounted(() => {
   execute();
@@ -85,5 +91,8 @@ const fetchRandomProduct = async () => {
   id = Math.floor(Math.random() * 10) + 1;
   url.value = `https://fakestoreapi.com/products/${id}`;
   //   refresh();
+};
+const changeDescription = () => {
+  if (product.value) product.value.description = "New description";
 };
 </script>
